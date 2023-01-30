@@ -9,16 +9,16 @@ export function Header() {
         </div>
 
         <div className="header_item">
-          <span>Home</span>
+          <a href="#home">Home</a>
         </div>
         <div className="header_item">
-          <span>About</span>
+          <a href="#about">About</a>
         </div>
         <div className="header_item">
-          <span>Contact</span>
+          <a  href="#contact">Contact</a>
         </div>
         <div className="header_item">
-          <span>Projects</span>
+          <a href="#projects">Projects</a>
         </div>
       </nav>
     </div>

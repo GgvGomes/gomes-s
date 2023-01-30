@@ -2,7 +2,7 @@ import "../../styles/home.scss";
 
 export function Home() {
   return (
-    <div className={`grid-content grid-home home`}>
+    <div className={`grid-content grid-home home`} id="home">
       <div className="first-grid">
         <div className="title">
           <h1>Hello, I'm Mrs. Gomes</h1>

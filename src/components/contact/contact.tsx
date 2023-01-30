@@ -2,7 +2,7 @@ import "../../styles/contact.scss";
 
 export function Contact() {
   return (
-    <div className={`grid-content grid-home contact`}>
+    <div className={`grid-content grid-home contact`} id="contact">
       <div className="title">
         <h1>Gomes's Contact</h1>
       </div>
