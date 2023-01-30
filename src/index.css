@@ -34,6 +34,16 @@
   flex-wrap: wrap;
 }
 
+/* Scroll estilizado */
+html{
+  scroll-behavior: smooth!important;
+}
+
+:target {
+  scroll-margin-top: 5rem;
+}
+/* =========================================================== */
+
 body {
   margin: 0;
   

@@ -41,3 +41,35 @@
         scale: 1.4;
     }
 }
+
+@keyframes animate_rotate_color {
+    0% {
+        transform: rotate(0deg);
+        background: linear-gradient($brown-500 52%, $brown-400);
+    }
+
+    20%{
+        transform: rotate(72deg);
+        background: linear-gradient($orange-600 52%, $brown-700);
+    }
+
+    40% {
+        transform: rotate(144deg);
+        background: linear-gradient($brown-400 52%, $brown-500);
+    }
+
+    60%{
+        transform: rotate(216deg);
+        background: linear-gradient($orange-600 52%, $brown-400);
+    }
+
+    80% {
+        transform: rotate(288deg);
+        background: linear-gradient($brown-400 52%, $brown-500);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        background: linear-gradient($brown-400 52%, $brown-700);
+    }
+}
