@@ -1,0 +1,94 @@
+@import '_variaveis.scss';
+@import '_animations.scss';
+
+.grid-header {
+    width: 100vw;
+    box-shadow: 0 6px 10px $brown-500;
+    background: linear-gradient($brown-400,$brown-700);
+
+    // background: linear-gradient($primary-brown,rgba(52, 22, 5, 0.9));
+    // background: linear-gradient(rgba(52, 22, 5, 0.9),$primary-brown);
+    // background: rgba(52, 22, 5, 0.9);
+    // background: rgba(96, 46, 18, 0.9);
+    // border-radius: 0px 0px 10px 10px;
+
+    padding: 12px 0px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    nav {
+        width: 70vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .profile,
+        img {
+            height: 40px;
+            width: 40px;
+
+            border-radius: 50%;
+        }
+
+        .profile {
+            border: 2px solid $orange-400;
+
+            transition: scale .5s;
+            &:hover {
+                scale: 1.4;
+
+                animation: profile_animation 2s infinite ease-in-out;
+            }
+            
+        }
+
+        .header_item {
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 600;
+            color: $textcolor-primary;
+            position: relative;
+            display: inline-block;
+
+            &::before, &::after {
+                content: '';
+                position: absolute;
+
+                width: 100%;
+                height: 2px;
+                background-color: $textcolor-primary;
+
+                border-radius: 6px;
+                scale: 0.1;
+                transition: scale 0.5s;
+            }
+
+            &::before {
+                transform-origin: left;
+                left: 0;
+                bottom: 0;
+            }
+            &::after {
+                transform-origin: right;
+                right: 0;
+                top: 0;
+            }
+
+            &:hover {
+                transform: scale(1.2);
+
+                &::before, &::after {
+                    scale: 1;
+                }
+            }
+        }
+    }
+}

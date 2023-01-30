@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+
+.contact {
+    font-family: 'Raleway', sans-serif;
+
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0px;
+
+    .grid-contacts {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        .first-grid {
+            width: 30%;
+            padding: 20px 0px;
+            max-width: 30%;
+
+            .text {
+                display: flex;
+                flex-wrap: wrap;
+
+                margin-top: 0px;
+                height: 234px;
+                max-height: 234px;
+
+                ul {
+                    margin: 0px;
+
+                    li {
+                        margin-bottom: 4px;
+                    }
+                }
+            }
+        }
+
+        .list {
+            height: 244px;
+            width: 23%;
+            padding: 8px;
+
+            img {
+                border-radius: 36px;
+
+                height: 100%;
+                width: 100%;
+
+                // Colocar borda rotativa
+
+                // filter: brightness(.9);
+                // filter: grayscale(30%);
+                // filter: blur(2px);
+                // filter: saturate(60%);
+                filter: sepia(45%);
+            }
+        }
+    }
+}

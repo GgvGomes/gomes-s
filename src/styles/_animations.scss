@@ -1,0 +1,43 @@
+@import './_variaveis.scss';
+
+@keyframes profile_animation {
+    0% {
+        border-color: $orange-400;
+        box-shadow: 0 4px 20px $orange-400;
+    }
+
+    20% {
+        border-color: $orange-400;
+        box-shadow: 0 4px 20px $orange-400;
+    }
+
+    40% {
+        border-color: $green-500;
+        box-shadow: 0 4px 20px $green-500;
+    }
+
+    60% {
+        border-color: $green-600;
+        box-shadow: 0 4px 20px $green-600;
+    }
+
+    80% {
+        border-color: $green-700;
+        box-shadow: 0 4px 20px $green-700;
+    }
+
+    100% {
+        border-color: $orange-400;
+        box-shadow: 0 4px 20px $orange-400;
+    }
+}
+
+@keyframes scale_animation {
+    0% {
+        scale: 1;
+    }
+
+    100% {
+        scale: 1.4;
+    }
+}
