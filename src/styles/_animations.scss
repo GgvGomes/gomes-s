@@ -48,7 +48,7 @@
         background: linear-gradient($brown-500 52%, $brown-400);
     }
 
-    20%{
+    20% {
         transform: rotate(72deg);
         background: linear-gradient($orange-600 52%, $brown-700);
     }
@@ -58,7 +58,7 @@
         background: linear-gradient($brown-400 52%, $brown-500);
     }
 
-    60%{
+    60% {
         transform: rotate(216deg);
         background: linear-gradient($orange-600 52%, $brown-400);
     }
@@ -71,5 +71,35 @@
     100% {
         transform: rotate(360deg);
         background: linear-gradient($brown-400 52%, $brown-700);
+    }
+}
+
+@keyframes left_to_Rigth {
+    from {
+        left: -60%;
+    }
+
+    to {
+        left: 60%;
+    }
+    }
+
+@keyframes cards_Left_to_Rigth {
+    from {
+        left: -60%;
+    }
+
+    to {
+        left: 0;
+    }
+}
+
+@keyframes cards_Rigth_to_Left {
+    from {
+        left: 60%;
+    }
+
+    to {
+        left: 0;
     }
 }

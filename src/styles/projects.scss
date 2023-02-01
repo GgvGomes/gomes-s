@@ -1,0 +1,168 @@
+@import '../styles/_variaveis.scss';
+@import '../styles/_animations.scss';
+
+.projects {
+    .grid-cards {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 600px;
+
+        background-color: #D9D9D9;
+        padding: 0px 72px;
+        border-radius: 40px;
+
+        max-width: 100%;
+        width: 100%;
+        position: relative;
+
+        button{
+            position: absolute;
+            border-radius: 50%;
+            padding: 8px 20px;
+            padding-bottom: 14px;
+
+            font-size: 32px;
+            display: flex;
+            align-items: center;
+            top: 44%;
+
+            opacity: .8;
+            background: rgba(96, 46, 18, 0.9);
+
+            &:hover{
+                transform: scale(1.1)
+            }
+            // z-index: 4;
+        }
+
+        .prev{
+            left: -20px;
+        }
+        .next{
+            right: -20px;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            overflow: hidden;
+            padding: 32px 20px;
+
+            .next_slider{
+                animation: cards_Left_to_Rigth 1s ease-in-out;
+            }
+            .prev_slider{
+                animation: cards_Rigth_to_Left 1s ease-in-out;
+            }
+            .card {
+                width: 44%;
+                height: 220px;
+
+                margin-bottom: 12px;
+                border-radius: 10px;
+
+                background: linear-gradient(rgba(99, 102, 100, 0.82), rgba(124, 124, 124, 0.63));
+
+                box-shadow: 13px 12px 12px rgb(0 0 0 / 62%);
+
+                position: relative;
+                overflow: hidden;
+
+                .ribbon {
+                    position: absolute;
+                    width: 150%;
+
+                    display: flex;
+                    justify-content: center;
+                    letter-spacing: 8px;
+
+                    background-color: black;
+                    color: white;
+                    padding: 5px 10px;
+                    left: -80px;
+
+                    span {
+                        position: relative;
+                        left: -60%;
+                        animation: left_to_Rigth 5s ease-in-out infinite;
+                    }
+                }
+
+                .first {
+                    top: 24px;
+                    transform: rotate(10deg);
+                }
+
+                .second {
+                    top: 80px;
+                    transform: rotate(355deg);
+                    left: -10;
+
+                    span {
+                        animation-delay: 1.5s;
+                    }
+                }
+
+                .thirth {
+                    top: 132px;
+                    transform: rotate(5deg);
+
+                    span {
+                        animation-delay: .2s;
+                    }
+                }
+
+                .fourth {
+                    top: 132px;
+                    transform: rotate(350deg);
+
+                    span {
+                        animation-delay: 2s;
+                    }
+                }
+
+                .fifth {
+                    top: 182px;
+                    transform: rotate(3deg);
+
+                    span {
+                        animation-delay: 1s;
+                    }
+                }
+
+                .sixth {
+                    top: 28px;
+                    transform: rotate(348deg);
+
+                    span {
+                        animation-delay: 3s;
+                    }
+                }
+            }
+            .card_w_item{
+                cursor: pointer;
+                transition: scale .5s;
+
+                img{
+                    width: 100%;
+                    height: 80%;
+                }
+                .grid-title{
+                    height: 14%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    color: rgba(52, 22, 5, 0.9);
+                    font-weight: 800;
+                }
+
+                &:hover{
+                    scale: (1.1);
+                }
+            }
+        }
+    }
+}

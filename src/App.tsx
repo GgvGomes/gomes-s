@@ -5,6 +5,7 @@ import { Footer } from "./components/footer/footer";
 
 import { Header } from "./components/header/header";
 import { Home } from "./components/home/home";
+import { Projects } from "./components/projects/projects";
 
 function App() {
   const about = {
@@ -30,6 +31,12 @@ function App() {
         <div className="container">
           <div className="content">
             <About />
+          </div>
+        </div>
+
+        <div className="container">
+          <div className="content">
+            <Projects />
           </div>
         </div>
 
