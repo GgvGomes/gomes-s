@@ -64,7 +64,7 @@ export function Projects() {
       setClassName("next_slider")
     }
 
-    setIndex(index == 1 ? 0 : Number(e) * 4 - 4)
+    setIndex(Number(e) * 4 - 4)
     setIndexEnd(Number(e) * 4)
   };
 
