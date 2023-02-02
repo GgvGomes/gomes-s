@@ -1,7 +1,6 @@
 @import './_variaveis.scss';
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
 
-
 .grid-home {
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
@@ -12,7 +11,7 @@
     color: black;
 
     .first-grid {
-        width: 70%;
+        width: 70em;
         padding: 20px 0px;
 
         .text {
@@ -22,17 +21,16 @@
             display: flex;
             justify-content: space-between;
 
-            height: 300px;
-            max-height: 300px;
+            height: 20rem;
+            max-height: 20rem;
 
             font-size: 16px;
         }
-
     }
     
     .list {
         background-color: #D9D9D9;
-        width: 29%;
+        width: 25rem;
         max-width: 29%;
 
         margin-top: 20px;
@@ -40,8 +38,8 @@
         border-radius: 36px;
         padding: 20px 28px;
 
-        height: 386px;
-        max-height: 386px;
+        height: 25.55rem;
+        max-height: 25.55rem;
 
         display: flex;
         b{
@@ -49,5 +47,4 @@
             font-weight: 900!important;
         }
     }
-
 }

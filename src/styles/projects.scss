@@ -7,10 +7,10 @@
         display: flex;
         flex-wrap: wrap;
         width: 100%;
-        height: 600px;
+        height: 38rem;
 
         background-color: #D9D9D9;
-        padding: 0px 72px;
+        padding: 0px 54px;
         border-radius: 40px;
 
         max-width: 100%;
@@ -68,7 +68,6 @@
         .prev {
             left: -20px;
         }
-
         .next {
             right: -20px;
         }
@@ -83,20 +82,18 @@
             .next_slider {
                 animation: cards_Left_to_Rigth 1s ease-in-out;
             }
-
             .prev_slider {
                 animation: cards_Rigth_to_Left 1s ease-in-out;
             }
 
             .card {
-                width: 44%;
-                height: 220px;
+                width: 22rem;
+                height: 14rem;
 
-                margin-bottom: 12px;
+                margin-bottom: 8px;
                 border-radius: 10px;
 
                 background: linear-gradient(rgba(99, 102, 100, 0.82), rgba(124, 124, 124, 0.63));
-
                 box-shadow: 13px 12px 12px rgb(0 0 0 / 62%);
 
                 position: relative;
@@ -121,12 +118,10 @@
                         animation: left_to_Rigth 5s ease-in-out infinite;
                     }
                 }
-
                 .first {
                     top: 24px;
                     transform: rotate(10deg);
                 }
-
                 .second {
                     top: 80px;
                     transform: rotate(355deg);
@@ -136,7 +131,6 @@
                         animation-delay: 1.5s;
                     }
                 }
-
                 .thirth {
                     top: 132px;
                     transform: rotate(5deg);
@@ -145,7 +139,6 @@
                         animation-delay: .2s;
                     }
                 }
-
                 .fourth {
                     top: 132px;
                     transform: rotate(350deg);
@@ -154,7 +147,6 @@
                         animation-delay: 2s;
                     }
                 }
-
                 .fifth {
                     top: 182px;
                     transform: rotate(3deg);
@@ -163,7 +155,6 @@
                         animation-delay: 1s;
                     }
                 }
-
                 .sixth {
                     top: 28px;
                     transform: rotate(348deg);

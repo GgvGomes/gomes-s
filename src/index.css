@@ -57,7 +57,7 @@ body {
 }
 
 .container{
-  margin-top: 2vh;
+  margin-top: 1rem;
 
   display: flex;
   justify-content: center;
@@ -68,7 +68,7 @@ body {
 }
 
 .first_container{
-  margin-top: 11.5vh;
+  margin-top: 4rem;
 }
 
 .content{
@@ -134,23 +134,10 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-/* button:hover {
-  border-color: #646cff;
-} */
-/* button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-} */
 
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
   }
-  /* a:hover {
-    color: #747bff;
-  } */
-  /* button {
-    background-color: #f9f9f9;
-  } */
 }

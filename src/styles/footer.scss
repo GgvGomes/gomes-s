@@ -14,8 +14,9 @@
 
 
     .content-footer {
-        padding: 12px 60px;
-        width: 90vw;
+        padding: 12px 0px;
+        margin-left: 12px;
+        width: 70vw;
 
         display: flex;
         justify-content: space-between;
@@ -38,6 +39,7 @@
 
                 width: 100%;
                 margin-bottom: 2px;
+                margin-left: 40px;
 
                 transition: scale .5s;
                 &:hover {
