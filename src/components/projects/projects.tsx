@@ -28,23 +28,9 @@ const items = [
 export function Projects() {
   const [index, setIndex] = useState(0);
   const [indexEnd, setIndexEnd] = useState(3);
+  const [group, setGroup] = useState('1');
 
   const [className, setClassName] = useState("");
-  const WhoMany = items.length / 4 - 1;
-  const [choicesArray, setChoicesArray] = useState<{ key: number; id: number }[]>([]);
-
-  // useEffect(() => {
-    // for (var i = 0; i <= WhoMany; i++) {
-    //   setChoicesArray((oldArray) => [
-    //     ...oldArray,
-    //     {
-    //       key: i,
-    //       id: i,
-    //     },
-    //   ]);
-    // }
-    // console.log(choicesArray);
-  // });
 
   useEffect(() => {
     // index == 0 ? setIndexEnd(index + 3) : setIndexEnd(index + 4);
@@ -55,6 +41,7 @@ export function Projects() {
     setClassName("");
     setClassName("prev_slider");
     setIndex(index == 0 ? items.length - 4 : index - 4);
+    setGroup(group != '1' ? (Number(group) - 1).toString() : '3')
   };
 
   const handleNext = () => {
@@ -63,9 +50,23 @@ export function Projects() {
     setIndex(
       index >= items.length - 1 || index + 4 > items.length - 1 ? 0 : index + 4
     );
+    setGroup(group != '4' ? (Number(group) + 1).toString(): '1')
   };
 
-  const handleChosen = (e: any) => {};
+  const handleChosen = (e: any) => {
+    setGroup(e);
+
+    if(index > Number(e)){
+      setClassName("")
+      setClassName("prev_slider")
+    }else if(index < Number(e)){
+      setClassName("")
+      setClassName("next_slider")
+    }
+
+    setIndex(index == 1 ? 0 : Number(e) * 4 - 4)
+    setIndexEnd(Number(e) * 4)
+  };
 
   return (
     <div className={`grid-content grid-home projects`} id="projects">
@@ -124,19 +125,35 @@ export function Projects() {
           {">"}
         </button>
 
-        <div className="grid-choice">
-          {choicesArray.map((choice) => {
-            return (
-              <span
-                className="option"
-                key={choice.key}
-                id={choice.id.toString()}
-                onClick={(e) => console.log(e)}
-              >
-                {/* 1 */}
-              </span>
-            );
-          })}
+        <div className="grid-choices">
+          <span
+            className={`option ${group == '1' && 'group-selected'}`}
+            key={"1"}
+            id={"1"}
+            onClick={(e : any) => handleChosen(e.target.id)}
+            // onClick={(e) => console.log(e)}
+          >1</span>
+          <span
+             className={`option ${group == '2' && 'group-selected'}`}
+            key={"2"}
+            id={"2"}
+            onClick={(e : any) => handleChosen(e.target.id)}
+            // onClick={(e) => console.log(e)}
+          >2</span>
+          <span
+             className={`option ${group == '3' && 'group-selected'}`}
+            key={"3"}
+            id={"3"}
+            onClick={(e : any) => handleChosen(e.target.id)}
+            // onClick={(e) => console.log(e)}
+          >3</span>
+          <span
+             className={`option ${group == '4' && 'group-selected'}`}
+            key={"4"}
+            id={"4"}
+            onClick={(e : any) => handleChosen(e.target.id)}
+            // onClick={(e) => console.log(e)}
+          >3</span>
         </div>
       </div>
     </div>

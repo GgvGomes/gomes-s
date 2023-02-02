@@ -17,7 +17,7 @@
         width: 100%;
         position: relative;
 
-        button{
+        button {
             position: absolute;
             border-radius: 50%;
             padding: 8px 20px;
@@ -31,31 +31,45 @@
             opacity: .8;
             background: rgba(96, 46, 18, 0.9);
             color: aliceblue;
-            
-            &:hover{
+
+            &:hover {
                 opacity: .9;
                 transform: scale(1.1)
             }
         }
 
-        .grid-choices{
+        .grid-choices {
             position: absolute;
-            bottom: 100px;
-            left: 50%;
+            bottom: 12px;
+            left: 46%;
 
-            .option{
-                span{
-                    height: 4px;
-                    width: 4px;
-                    background-color: black;
+            display: flex;
+            gap: 4px;
+
+            .option {
+                height: 10px;
+                width: 16px;
+                border-radius: 20px;
+
+                background-color: $brown-700;
+                color: transparent;
+
+                opacity: .8;
+                cursor: pointer;
+                transition: scale .5s;
+
+                &:hover{
+                    scale: 1.2;
                 }
             }
+            .group-selected{opacity: 1;}
         }
 
-        .prev{
+        .prev {
             left: -20px;
         }
-        .next{
+
+        .next {
             right: -20px;
         }
 
@@ -66,12 +80,14 @@
             overflow: hidden;
             padding: 32px 20px;
 
-            .next_slider{
+            .next_slider {
                 animation: cards_Left_to_Rigth 1s ease-in-out;
             }
-            .prev_slider{
+
+            .prev_slider {
                 animation: cards_Rigth_to_Left 1s ease-in-out;
             }
+
             .card {
                 width: 44%;
                 height: 220px;
@@ -157,27 +173,30 @@
                     }
                 }
             }
-            .card_w_item{
+
+            .card_w_item {
                 cursor: pointer;
                 transition: scale .5s;
 
-                img{
+                img {
                     width: 100%;
                     height: 80%;
                 }
-                .grid-title{
+
+                .grid-title {
                     height: 14%;
                     display: flex;
                     align-items: center;
                     justify-content: center;
 
                     color: rgba(52, 22, 5, 0.9);
-                    span{
+
+                    span {
                         font-weight: 700;
                     }
                 }
 
-                &:hover{
+                &:hover {
                     scale: (1.1);
                 }
             }
