@@ -1,5 +1,6 @@
 @import '../styles/_variaveis.scss';
 @import '../styles/_animations.scss';
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700&display=swap');
 
 .projects {
     .grid-cards {
@@ -29,11 +30,26 @@
 
             opacity: .8;
             background: rgba(96, 46, 18, 0.9);
-
+            color: aliceblue;
+            
             &:hover{
+                opacity: .9;
                 transform: scale(1.1)
             }
-            // z-index: 4;
+        }
+
+        .grid-choices{
+            position: absolute;
+            bottom: 100px;
+            left: 50%;
+
+            .option{
+                span{
+                    height: 4px;
+                    width: 4px;
+                    background-color: black;
+                }
+            }
         }
 
         .prev{
@@ -156,7 +172,9 @@
                     justify-content: center;
 
                     color: rgba(52, 22, 5, 0.9);
-                    font-weight: 800;
+                    span{
+                        font-weight: 700;
+                    }
                 }
 
                 &:hover{

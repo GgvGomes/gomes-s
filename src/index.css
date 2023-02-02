@@ -17,7 +17,8 @@
   /* background:linear-gradient(rgba(54, 223, 122, 0.82),rgba(16, 139, 65, 0.82)); */
   /* background:linear-gradient(rgba(71, 249, 142, 0.82),rgba(16, 139, 65, 0.82)); */
   /* background: linear-gradient(rgba(219, 249, 231, 0.82),rgba(162, 176, 168, 0.82)); */
-  background: linear-gradient(rgba(162, 176, 168, 0.82),rgba(217, 217, 217, 0.7));
+  /* background: linear-gradient(rgba(162, 176, 168, 0.82),rgba(217, 217, 217, 0.574)); */
+  
 
   /* background:linear-gradient(rgba(244, 111, 37, 0.82), rgba(190, 75, 10, 0.82)); */
 
@@ -46,7 +47,8 @@ html{
 
 body {
   margin: 0;
-  
+  background: rgba(92, 92, 92, 0.434);
+
   min-width: 320px;
   max-width: 100vw;
   min-height: 100vh;
@@ -116,7 +118,7 @@ a {
   transition: font-size .5s;
 }
 a:hover {
-  font-size: 18px;
+  font-size: 17px;
   color: rgba(190, 75, 10, 0.82);
 }
 
@@ -145,10 +147,10 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
-  a:hover {
+  /* a:hover {
     color: #747bff;
-  }
-  button {
+  } */
+  /* button {
     background-color: #f9f9f9;
-  }
+  } */
 }
