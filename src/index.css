@@ -104,6 +104,12 @@ body {
   margin: 0px;
 }
 
+@media (max-width: 500px) {
+  .title  h1 {
+    font-size: 20px;
+  }
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;

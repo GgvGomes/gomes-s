@@ -10,10 +10,6 @@
     padding: 20px 0px;
     color: black;
 
-    @media (max-width: 768px) {
-        flex-wrap: wrap;
-    }
-
     .first-grid {
         width: 70em;
         padding: 20px 0px;
@@ -26,14 +22,8 @@
             justify-content: space-between;
 
             height: 20rem;
-            max-height: 20rem;
 
             font-size: 16px;
-        }
-
-        @media (max-width: 768px) {
-            display: flex;
-            flex-wrap: wrap;
         }
     }
     
@@ -54,10 +44,25 @@
             font-size: 16px;
             font-weight: 900!important;
         }
+    }
 
-        @media (max-width: 768px) {
+    @media (max-width: 768px) {
+        flex-wrap: wrap;
+        .first-grid{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .list{
             margin: 0;
             width: 100%;
+        }
+    }
+    @media (max-width: 768px) {
+        .first-grid{
+            .text{
+                height: 32rem;
+            }   
         }
     }
 }
