@@ -203,7 +203,7 @@
                 }
             }
         }
-        @media (max-width: 768px) {
+        @media (max-width: 500px) {
             padding: 0px 4px;
             height: 52rem;
 
@@ -223,6 +223,11 @@
 
             button{
                 top: 46%;
+            }
+        }
+        @media (max-width: 400px) {
+            .grid-choices{
+                left: 6em;
             }
         }
     }

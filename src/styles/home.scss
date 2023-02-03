@@ -58,10 +58,17 @@
             width: 100%;
         }
     }
-    @media (max-width: 768px) {
+    @media (max-width: 500px) {
         .first-grid{
             .text{
                 height: 32rem;
+            }   
+        }
+    }
+    @media (max-width: 400px) {
+        .first-grid{
+            .text{
+                height: 36rem;
             }   
         }
     }
