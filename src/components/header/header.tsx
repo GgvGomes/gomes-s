@@ -1,3 +1,5 @@
+import { FaBars } from 'react-icons/fa';
+
 import "../../styles/header.scss";
 
 export function Header() {
@@ -19,6 +21,10 @@ export function Header() {
         </div>
         <div className="header_item">
           <a href="#projects">Projects</a>
+        </div>
+
+        <div className="menu_bar">
+            <FaBars size={20} />
         </div>
       </nav>
     </div>
