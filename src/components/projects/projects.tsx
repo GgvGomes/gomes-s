@@ -2,11 +2,11 @@ import "../../styles/projects.scss";
 import { useEffect, useState } from "react";
 import { Card_in_Progess, Card_with_Item } from "./cards";
 
-export const BaseUrl =
+const BaseUrl =
   window.location.href.indexOf("localhost") != -1
     ? "./src/assets/"
     : "https://github.com/GgvGomes/gomes-s/blob/master/src/assets/";
-export const localHost =
+const localHost =
   window.location.href.indexOf("localhost") != -1 ? true : false;
 
 const items = [

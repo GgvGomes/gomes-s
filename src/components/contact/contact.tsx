@@ -1,5 +1,11 @@
-import { BaseUrl, localHost } from "../../App";
 import "../../styles/contact.scss";
+
+const BaseUrl =
+  window.location.href.indexOf("localhost") != -1
+    ? "./src/assets/"
+    : "https://github.com/GgvGomes/gomes-s/blob/master/src/assets/";
+const localHost =
+  window.location.href.indexOf("localhost") != -1 ? true : false;
 
 export function Contact() {
   return (

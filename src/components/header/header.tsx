@@ -2,7 +2,13 @@ import { FaBars } from "react-icons/fa";
 import { useState } from "react";
 
 import "../../styles/header.scss";
-import { BaseUrl, localHost } from "../../App";
+
+const BaseUrl =
+  window.location.href.indexOf("localhost") != -1
+    ? "./src/assets/"
+    : "https://github.com/GgvGomes/gomes-s/blob/master/src/assets/";
+const localHost =
+  window.location.href.indexOf("localhost") != -1 ? true : false;
 
 export function Header() {
   const [visible, setVisible] = useState("hidden");
