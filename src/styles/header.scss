@@ -43,6 +43,7 @@
             border: 2px solid $orange-400;
 
             transition: scale 0.5s;
+
             &:hover {
                 scale: 1.4;
 
@@ -77,6 +78,7 @@
                 left: 0;
                 bottom: 0;
             }
+
             &::after {
                 transform-origin: right;
                 right: 0;
@@ -116,6 +118,8 @@
 
         .menu_items {
             display: none;
+
+            animation: top_to_bottom .5s ease-in-out both;
         }
 
         .visible {
@@ -132,17 +136,28 @@
 
             width: 100vw;
 
-            background-color: black;
+            box-shadow: 0 6px 10px rgb(66 29 8 / 82%);
+            background:rgba(52, 22, 5, 0.9);
 
             .header_item {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 border-bottom: 1px solid aliceblue;
+                padding: 12px;
 
                 width: 100%;
                 display: flex;
             }
         }
+    }
+}
+
+@keyframes top_to_bottom {
+    0%{
+        top: 0px
+    }
+    100%{
+        top: 68px;
     }
 }
