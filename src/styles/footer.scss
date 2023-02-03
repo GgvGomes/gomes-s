@@ -42,11 +42,30 @@
                 margin-left: 40px;
 
                 transition: scale .5s;
+
                 &:hover {
-                    // font-size: 16px;
                     scale: (1.2);
                 }
             }
         }
+    }
+
+    @media (max-width: 500px) {
+        .content-footer {
+            .left,
+            .rigth {
+                font-size: 10px;
+                line-height: 14px;
+                a{
+                    font-size: 10px;
+                    line-height: 10px;
+                    margin-bottom: 0px;
+                }
+                svg{
+                    width: 12px;
+                }
+            }
+        }
+
     }
 }
