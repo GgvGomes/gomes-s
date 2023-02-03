@@ -1,11 +1,17 @@
 import "../../styles/projects.scss";
 import { useEffect, useState } from "react";
 import { Card_in_Progess, Card_with_Item } from "./cards";
-import { BaseUrl, localHost } from "../../App";
+
+export const BaseUrl =
+  window.location.href.indexOf("localhost") != -1
+    ? "./src/assets/"
+    : "https://github.com/GgvGomes/gomes-s/blob/master/src/assets/";
+export const localHost =
+  window.location.href.indexOf("localhost") != -1 ? true : false;
 
 const items = [
   {
-    img: BaseUrl+"projects/link_tree.png" + localHost ? '' : '?raw=true',
+    img: BaseUrl + "projects/link_tree.png" + localHost ? "" : "?raw=true",
     title: "My Link Tree",
     to: "https://tree-link.vercel.app",
   },
@@ -29,7 +35,7 @@ const items = [
 export function Projects() {
   const [index, setIndex] = useState(0);
   const [indexEnd, setIndexEnd] = useState(3);
-  const [group, setGroup] = useState('1');
+  const [group, setGroup] = useState("1");
 
   const [className, setClassName] = useState("");
 
@@ -42,7 +48,7 @@ export function Projects() {
     setClassName("");
     setClassName("prev_slider");
     setIndex(index == 0 ? items.length - 4 : index - 4);
-    setGroup(group != '1' ? (Number(group) - 1).toString() : '3')
+    setGroup(group != "1" ? (Number(group) - 1).toString() : "3");
   };
 
   const handleNext = () => {
@@ -51,22 +57,22 @@ export function Projects() {
     setIndex(
       index >= items.length - 1 || index + 4 > items.length - 1 ? 0 : index + 4
     );
-    setGroup(group != '4' ? (Number(group) + 1).toString(): '1')
+    setGroup(group != "4" ? (Number(group) + 1).toString() : "1");
   };
 
   const handleChosen = (e: any) => {
     setGroup(e);
 
-    if(index > Number(e)){
-      setClassName("")
-      setClassName("prev_slider")
-    }else if(index < Number(e)){
-      setClassName("")
-      setClassName("next_slider")
+    if (index > Number(e)) {
+      setClassName("");
+      setClassName("prev_slider");
+    } else if (index < Number(e)) {
+      setClassName("");
+      setClassName("next_slider");
     }
 
-    setIndex(Number(e) * 4 - 4)
-    setIndexEnd(Number(e) * 4)
+    setIndex(Number(e) * 4 - 4);
+    setIndexEnd(Number(e) * 4);
   };
 
   return (
@@ -128,33 +134,41 @@ export function Projects() {
 
         <div className="grid-choices">
           <span
-            className={`option ${group == '1' && 'group-selected'}`}
+            className={`option ${group == "1" && "group-selected"}`}
             key={"1"}
             id={"1"}
-            onClick={(e : any) => handleChosen(e.target.id)}
+            onClick={(e: any) => handleChosen(e.target.id)}
             // onClick={(e) => console.log(e)}
-          >1</span>
+          >
+            1
+          </span>
           <span
-             className={`option ${group == '2' && 'group-selected'}`}
+            className={`option ${group == "2" && "group-selected"}`}
             key={"2"}
             id={"2"}
-            onClick={(e : any) => handleChosen(e.target.id)}
+            onClick={(e: any) => handleChosen(e.target.id)}
             // onClick={(e) => console.log(e)}
-          >2</span>
+          >
+            2
+          </span>
           <span
-             className={`option ${group == '3' && 'group-selected'}`}
+            className={`option ${group == "3" && "group-selected"}`}
             key={"3"}
             id={"3"}
-            onClick={(e : any) => handleChosen(e.target.id)}
+            onClick={(e: any) => handleChosen(e.target.id)}
             // onClick={(e) => console.log(e)}
-          >3</span>
+          >
+            3
+          </span>
           <span
-             className={`option ${group == '4' && 'group-selected'}`}
+            className={`option ${group == "4" && "group-selected"}`}
             key={"4"}
             id={"4"}
-            onClick={(e : any) => handleChosen(e.target.id)}
+            onClick={(e: any) => handleChosen(e.target.id)}
             // onClick={(e) => console.log(e)}
-          >3</span>
+          >
+            3
+          </span>
         </div>
       </div>
     </div>
