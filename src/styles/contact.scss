@@ -108,5 +108,11 @@
                 margin: auto;
             }
         }
+
+        @media (max-width: 320px) {
+            .list {
+                width: 80%;
+            }
+        }
     }
 }

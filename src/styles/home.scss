@@ -72,4 +72,23 @@
             }   
         }
     }
+
+    @media (max-width: 320px) {
+        font-size: 10px;
+        .first-grid{
+            .text{
+                font-size: 12px;
+                height: 36rem;
+            }   
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .about{
+        .list{
+            // margin-left: 0px;
+            padding: 20px;
+        }
+    }
 }

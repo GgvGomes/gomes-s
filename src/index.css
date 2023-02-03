@@ -110,6 +110,18 @@ body {
   }
 }
 
+@media (max-width: 500px) {
+  .title  h1 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 320px) {
+  .title  h1 {
+    font-size: 18px;
+  }
+}
+
 @media (max-width: 400px) {
   .about .title, .about .text{
     padding: 12px 6px;
