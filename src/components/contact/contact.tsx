@@ -1,3 +1,4 @@
+import { BaseUrl, localHost } from "../../App";
 import "../../styles/contact.scss";
 
 export function Contact() {
@@ -33,7 +34,7 @@ export function Contact() {
 
         <div className="list">
           {/* <span className="second"></span> */}
-          <img src="src/assets/all_body.jpeg" alt="" />
+          <img src={`${BaseUrl}all_body.jpeg${localHost ? '' : '?raw=true'}`} alt="" />
         </div>
       </div>
     </div>

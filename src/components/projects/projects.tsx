@@ -1,10 +1,11 @@
 import "../../styles/projects.scss";
 import { useEffect, useState } from "react";
 import { Card_in_Progess, Card_with_Item } from "./cards";
+import { BaseUrl, localHost } from "../../App";
 
 const items = [
   {
-    img: "src/assets/projects/link_tree.png",
+    img: `${BaseUrl}projects/link_tree.png${localHost ? '' : '?raw=true'}`,
     title: "My Link Tree",
     to: "https://tree-link.vercel.app",
   },

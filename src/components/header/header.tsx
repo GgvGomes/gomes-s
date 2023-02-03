@@ -1,19 +1,13 @@
 import { FaBars } from "react-icons/fa";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import "../../styles/header.scss";
+import { BaseUrl, localHost } from "../../App";
 
 export function Header() {
   const [visible, setVisible] = useState("hidden");
 
   const menu = document.querySelector(".menu_items");
-  // else{
-  //   document.addEventListener("click", () => {})
-  // }
-
-  // useEffect(() => {
-  //   document.removeEventListener("click", () => {});
-  // });
 
   const handleVisible = () => {
     setVisible("hidden");
@@ -23,7 +17,7 @@ export function Header() {
     <div className="grid-header">
       <nav>
         <div className="profile">
-          <img src="src/assets/me.jpeg" alt="" />
+          <img src={`${BaseUrl}me.jpeg${localHost ? '' : '?raw=true'}`} alt="" />
         </div>
 
         <div className="header_item">
