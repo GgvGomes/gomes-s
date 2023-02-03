@@ -1,10 +1,10 @@
-@import '_variaveis.scss';
-@import '_animations.scss';
+@import "_variaveis.scss";
+@import "_animations.scss";
 
 .grid-header {
     width: 100vw;
     box-shadow: 0 6px 10px $brown-500;
-    background: linear-gradient($brown-400,$brown-700);
+    background: linear-gradient($brown-400, $brown-700);
 
     // background: linear-gradient($primary-brown,rgba(52, 22, 5, 0.9));
     // background: linear-gradient(rgba(52, 22, 5, 0.9),$primary-brown);
@@ -42,13 +42,12 @@
         .profile {
             border: 2px solid $orange-400;
 
-            transition: scale .5s;
+            transition: scale 0.5s;
             &:hover {
                 scale: 1.4;
 
                 animation: profile_animation 2s infinite ease-in-out;
             }
-            
         }
 
         .header_item {
@@ -59,8 +58,9 @@
             position: relative;
             display: inline-block;
 
-            &::before, &::after {
-                content: '';
+            &::before,
+            &::after {
+                content: "";
                 position: absolute;
 
                 width: 100%;
@@ -83,18 +83,19 @@
                 top: 0;
             }
 
-            a{
+            a {
                 color: aliceblue;
 
                 &:target {
-                    scroll-margin-top: .8em;
-                  }
+                    scroll-margin-top: 0.8em;
+                }
             }
-        
+
             &:hover {
                 transform: scale(1.2);
 
-                &::before, &::after {
+                &::before,
+                &::after {
                     scale: 1;
                 }
             }
@@ -104,12 +105,43 @@
             }
         }
 
-        .menu_bar{
+        .menu_bar {
             display: none;
 
             @media (max-width: 768px) {
                 display: flex;
                 color: aliceblue;
+            }
+        }
+
+        .menu_items {
+            display: none;
+        }
+
+        .visible {
+            z-index: 9999;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 8px;
+
+            position: absolute;
+            top: 68px;
+            left: 0;
+
+            width: 100vw;
+
+            background-color: black;
+
+            .header_item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-bottom: 1px solid aliceblue;
+
+                width: 100%;
+                display: flex;
             }
         }
     }
