@@ -203,5 +203,27 @@
                 }
             }
         }
+        @media (max-width: 768px) {
+            padding: 0px 4px;
+            height: 52rem;
+
+            .row{
+                flex-wrap: wrap;
+                gap: 20px;
+                .card{
+                    margin: auto;
+                    width: 12em;
+                    height: 10em;
+                }
+            }
+
+            .grid-choices{
+                left: 7em;
+            }
+
+            button{
+                top: 46%;
+            }
+        }
     }
 }
