@@ -192,5 +192,16 @@
                 }
             }
         }
+
+        @media (max-width: 768px) {
+            padding: 0px 4px;
+
+            .row{
+                .card{
+                    width: 12em;
+                    height: 10em;
+                }
+            }
+        }
     }
 }
