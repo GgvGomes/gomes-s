@@ -5,7 +5,7 @@ import { BaseUrl, localHost } from "../../App";
 
 const items = [
   {
-    img: `${BaseUrl}projects/link_tree.png${localHost ? '' : '?raw=true'}`,
+    img: BaseUrl+"projects/link_tree.png" + localHost ? '' : '?raw=true',
     title: "My Link Tree",
     to: "https://tree-link.vercel.app",
   },
