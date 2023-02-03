@@ -3,7 +3,7 @@ import "../../styles/contact.scss";
 const BaseUrl =
   window.location.href.indexOf("localhost") != -1
     ? "./src/assets/"
-    : "https://github.com/GgvGomes/gomes-s/blob/master/src/assets/";
+    : "https://raw.githubusercontent.com/GgvGomes/gomes-s/main/src/assets/";
 const localHost =
   window.location.href.indexOf("localhost") != -1 ? true : false;
 

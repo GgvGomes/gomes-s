@@ -5,13 +5,14 @@ import { Card_in_Progess, Card_with_Item } from "./cards";
 const BaseUrl =
   window.location.href.indexOf("localhost") != -1
     ? "./src/assets/"
-    : "https://github.com/GgvGomes/gomes-s/blob/master/src/assets/";
+    : "https://raw.githubusercontent.com/GgvGomes/gomes-s/main/src/assets/";
 const localHost =
   window.location.href.indexOf("localhost") != -1 ? true : false;
 
 const items = [
   {
-    img: BaseUrl + "projects/link_tree.png" + localHost ? "" : "?raw=true",
+    img: `${BaseUrl}projects/link_tree.png${localHost ? "" : "?raw=true"}`,
+    // img: `${BaseUrl}"projects/link_tree.png" + localHost ? "" : "?raw=true"`,
     title: "My Link Tree",
     to: "https://tree-link.vercel.app",
   },
