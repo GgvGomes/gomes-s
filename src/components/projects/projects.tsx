@@ -16,7 +16,12 @@ const items = [
     title: "My Link Tree",
     to: "https://tree-link.vercel.app",
   },
-  {},
+  {
+    img: `${BaseUrl}projects/Detetive_list.png${localHost ? "" : "?raw=true"}`,
+    // img: `${BaseUrl}"projects/link_tree.png" + localHost ? "" : "?raw=true"`,
+    title: "Simple Detitve List",
+    to: "https://detetive-list.vercel.app",
+  },
   {},
   {},
   {},
